@@ -1,0 +1,25 @@
+.splash {
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 100%;
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+    }
+
+
+    background-image: url(../images/jcr-logo.png);
+    background-repeat: no-repeat;
+    background-position: -15px -9px;
+    color: transparent;
+    display: block;
+    height: 255px;
+    width: 253px;
+
+    align-self: center;
+}

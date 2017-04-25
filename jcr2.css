@@ -1,0 +1,195 @@
+@charset "utf-8";  /* jumpcastleriot.com style sheet */
+body {font-family:Tahoma;
+   width:1200px;
+   color: #303030;		
+   margin:0 auto;                       /* centers content within a block*/
+   text-align:left; 
+   border: 2px  solid gray;
+   background-color: #e0e0e0;
+}			
+nav {text-align: center;		/* navigation */
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+ul#navlist {
+   margin: 0;
+   padding-left: 0;
+   white-space: nowrap;
+   background-color: transparent;
+}
+#navlist li {
+   margin-right: 80px;display: inline;
+   list-style-type: none;
+   color: #000;
+   line-height: 15px;
+}
+#navlist a:hover {
+   text-decoration: underline;
+   color: 0000ff;
+   background-color: transparent; 	/* end nav-specific tags */
+}
+a {
+   color: #fff;
+}   
+a.plain:link, a.plain:visited {
+   color: #fff;
+   background-color: transparent;
+   text-decoration: none;
+   font-weight: 900;
+   text-shadow: 2px 2px 4px #000000;
+   font-size: 28px;
+}
+a.plaincap:link, a.plaincap:visited {
+   color: #ff0000;
+   background-color: transparent;
+   text-decoration: none;
+   font-weight: 900;
+   text-shadow: 2px 2px 4px #000000;
+   font-size: 28px;
+}
+audio {
+   width: 300px;
+}
+footer{
+   padding-top: 0px;
+   font-size: 14px;
+   border-top: 1px solid gray;
+}
+h1{        /* used in title on each page */
+   font-size: 90px; 
+   font-weight:900; 
+   height: 95px; 
+   letter-spacing:-5px;
+   text-align: center; 
+   text-shadow: 2px 2px 4px #000000; 
+   color: red; 
+   padding-bottom: 5px;
+   margin:auto;
+   width:90%;    /* to make margin:auto work */
+}
+h2 {             /* just on home page */
+   margin-top: 10px;
+   margin-bottom: 0px;
+   margin-left: 90px; 
+   font-size: 40px;
+   font-weight:900; 
+   color:#fff; 
+   text-shadow: 2px 2px 4px #000000;
+}
+iframe{
+   border:none;
+   width: 1200px;
+   height:40px;
+}
+iframe.video{
+   width: 400px;
+   border:none;
+   height:200px;
+}
+p{
+ line-height: 25px;
+ }
+ 
+ /*Begin Gallery */
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.gallerycontainer{
+position: relative;
+padding-top: 0px;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
+}
+
+.thumbnail img{
+border: 1px solid white;
+margin: 0 5px 5px 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+}
+
+.thumbnail:hover img{
+border: 1px solid black;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color:#F3F3F1;
+padding: 5px;
+left: -1000px;
+border: none;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+width:900px;
+margin-left: 500;
+
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image*/
+position: fixed;  /*added*/
+visibility: visible;
+top: 0px;
+left: 0px; /*position where enlarged image should offset horizontally */
+z-index: 50;
+}
+ 
+/* CLASSES */
+.backgrounda {  /* original home page */
+   background: url(images/clr.jpg) ;
+   background-repeat: no-repeat;
+   background-size : 1200px;
+   border: 1px solid black;
+   width:1200px;
+   height:750px;
+}
+.backgroundb { /* original nav background */
+   background: url(images/bw.png) ;
+   background-repeat: no-repeat;
+   background-size : 1200px;
+   border: 1px solid black;
+   width:1200px;
+
+}
+.backgrounde {
+   background: url(images/colorsmall.jpg) ;
+   background-repeat: no-repeat;
+   background-size : 1200px;
+   border: 1px solid black;
+   width:1200px;
+}
+.backgroundf {
+   background: url(images/color1.jpg) ;
+   background-repeat: no-repeat;
+   background-size : 1200px;
+   border: 1px solid black;
+   width:1200px;
+}
+.cap {
+   color: #ff0000;
+}
+.content{
+   background-color: #e0e0e0;
+   padding: 10px 20px  0px 20px;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.leftcolumn{
+  /* position: absolute;*/
+  float:left;
+  width: 430px;
+  margin-left:60px;
+  padding: 10px;
+}
+.rightcolumn{
+  /*position: absolute;*/
+  float:right;
+  width: 410px;
+  padding: 10px;
+}
