@@ -10,11 +10,14 @@
 
         overflow: hidden;
         background-color: #000; color: #FFF;
+        padding: 5px;
         transition: height .5s ease-out, top .5s ease-out;
 
         @media screen and (min-width:768px) {
-            position: static;
+            
             height: auto;
+            position: static;
+            padding: 0;
         }
 
     }
@@ -69,6 +72,24 @@
 
     &:after {
         bottom: 0;
+    }
+
+    &.close {
+        background: transparent;
+
+        &:before,
+        &:after {
+            background: #fff;
+            top: 24px;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+    
+        &:after {
+            transform: rotate(-45deg);
+        }
     }
 }
 

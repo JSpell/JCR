@@ -65,11 +65,13 @@
 
             &:nth-child(5) { 
                 background-image: url(../images/5.jpg);
+                background-position-y: 25%;
                 animation-delay: 24s; 
             }
 
             &:nth-child(6) { 
                 background-image: url(../images/6.jpg);
+                background-position-y: 25%;
                 animation-delay: 30s;
             }
         }
