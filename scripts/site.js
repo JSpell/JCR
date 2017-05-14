@@ -23,7 +23,7 @@ function readTextFile(file)
                 var allText = rawFile.responseText;
                 var found = allText.indexOf('data-schedule="next show"');
 
-                console.log(found);
+                //console.log(found);
             }
         }
     }
