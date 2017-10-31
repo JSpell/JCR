@@ -97,6 +97,8 @@
     display: flex;
     text-align: center;
     flex-direction: column;
+    max-width: 980px;
+    margin: 0 auto;
 
     li {
         padding: 20px 0;
