@@ -9,7 +9,8 @@
         height: 0;
 
         overflow: hidden;
-        background-color: #000; color: #FFF;
+        background-color: rgba(0,0,0, .9); 
+        color: #FFF;
         transition: height .5s ease-out, top .5s ease-out;
 
         @media screen and (min-width:768px) {
@@ -28,9 +29,14 @@
         &.nav-open {
             transition: none;
         }
+
+        @media screen and (min-width:768px) { 
+            height: auto;
+        }
     }
 
-    &:checked ~ .content {
+    &:checked ~ .content,
+    &:checked ~ .header .menu-icon {
         display: none;
     }
 }
@@ -93,7 +99,7 @@
 }
 
 .nav-list {
-    background-color: rgba(0,0,0,.75);
+    //background-color: rgba(0,0,0,.75);
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -101,12 +107,15 @@
     margin: 0 auto;
 
     li {
-        padding: 20px 0;
+        
     }
 
     a {
+        display: inline-block;
         color: white;
         text-decoration: none;
+        padding: 20px 0;
+        width: 100%;
     }
 
     @media screen and (orientation:landscape) {
