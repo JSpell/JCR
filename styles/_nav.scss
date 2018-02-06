@@ -15,9 +15,11 @@
 
         @media screen and (min-width:768px) {
             
+            background-color: #000;
             height: auto;
             position: static;
             padding: 0;
+            width: auto;
         }
 
     }
@@ -99,7 +101,6 @@
 }
 
 .nav-list {
-    //background-color: rgba(0,0,0,.75);
     display: flex;
     text-align: center;
     flex-direction: column;
