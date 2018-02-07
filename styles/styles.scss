@@ -6,12 +6,12 @@ html,body {
     margin:0;
     padding:0;
     font-family: 'Open Sans', sans-serif;
-    height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     color: #fff;
 }
 
@@ -46,7 +46,8 @@ ul {
         background-color: #000;
         height:116px;
         padding: 0;
-        position: inherit;
+        //position: inherit;
+        z-index: 1;
     }
 }
 
@@ -67,7 +68,6 @@ footer {
     flex-direction: row;
     padding: 10px;
     position: relative;
-    width: 100%;
 }
 
 .landing-page {
@@ -75,11 +75,12 @@ footer {
 }
 
 .copyright {
+    align-self: center;
     flex: 1 1 auto;
-    margin-top: auto;
 }
 
 .social-media-container {
+    align-self: center;
     text-align: right;
     flex: 1 1 auto;
 
