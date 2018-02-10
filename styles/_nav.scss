@@ -21,6 +21,36 @@
             position: static;
             padding: 0;
             width: auto;
+            transition: none;
+            transition: unset;
+
+            .nav-list li:nth-child(3) {
+                transition: margin-right .25s;
+            }
+
+            .nav-list li:nth-child(4) {
+                transition: margin-left .25s;
+            }
+
+            &.sticky {
+                position: fixed; 
+                top: 116px; 
+                width: 100%;
+
+                .nav-list li:nth-child(3) {
+                    margin-right: 50px;
+                    transition: margin-right .25s;
+                }
+
+                .nav-list li:nth-child(4) {
+                    margin-left: 50px;
+                    transition: margin-left .25s;
+                }
+
+                ~ main {
+                    margin-top: 62px;
+                }
+            }
         }
 
     }

@@ -1,6 +1,6 @@
 // Main JS should go here!
 // Include scripts using Browserify by doing:
-// var $ = require("jquery");
+//import $ from "jquery";
 
 
 /* Listen for a transition! */
@@ -8,6 +8,21 @@ var navElement = document.getElementsByTagName("nav")[0];
 navElement.addEventListener("transitionend", function(e) {
 	if(e.propertyName == "top")
         navElement.classList.toggle("nav-open");
+});
+
+var heroContainer = document.querySelector(".hero-container");
+var navBar = document.querySelector("nav");
+
+window.addEventListener('scroll', function() {
+    if(window.pageYOffset >= heroContainer.offsetHeight)
+        navBar.classList.add('sticky');
+    else
+        navBar.classList.remove('sticky');
+});
+
+window.addEventListener('resize', function() {
+    if(window.innerWidth > 768 && window.pageYOffset < heroContainer.offsetHeight)
+        navBar.classList.remove('sticky');
 });
 
 function readTextFile(file)
