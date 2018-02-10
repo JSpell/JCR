@@ -4,7 +4,7 @@
     
     & ~ nav {
         position: absolute;
-        width: 100vw;
+        width: 100%;
         top: 100vh;
         height: 0;
 
@@ -135,7 +135,7 @@
     display: flex;
     text-align: center;
     flex-direction: column;
-    max-width: 980px;
+    max-width: 1200px;
     margin: 0 auto;
 
     a {

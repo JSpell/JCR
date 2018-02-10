@@ -2,16 +2,19 @@
 // Include scripts using Browserify by doing:
 //import $ from "jquery";
 
+let body = document.querySelector('body');
+let heroContainer = document.querySelector(".hero-container");
+let navBar = document.querySelector("nav");
+let navControl = document.querySelector('#navControl');
 
 /* Listen for a transition! */
-var navElement = document.getElementsByTagName("nav")[0];
-navElement.addEventListener("transitionend", function(e) {
-	if(e.propertyName == "top")
-        navElement.classList.toggle("nav-open");
-});
+navBar.addEventListener("transitionend", function(e) {
+	if(e.propertyName == "top") {
+        navBar.classList.toggle("nav-open");
+        body.classList.toggle('nav-open');
+    }
+}, false);
 
-var heroContainer = document.querySelector(".hero-container");
-var navBar = document.querySelector("nav");
 
 window.addEventListener('scroll', function() {
     if(window.pageYOffset >= heroContainer.offsetHeight)
@@ -21,8 +24,18 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('resize', function() {
-    if(window.innerWidth > 768 && window.pageYOffset < heroContainer.offsetHeight)
-        navBar.classList.remove('sticky');
+    if(window.innerWidth > 768) {
+        if(window.pageYOffset < heroContainer.offsetHeight)
+            navBar.classList.remove('sticky');
+
+        if(body.classList.contains('nav-open')) {
+            body.classList.remove('nav-open');
+            navBar.classList.remove("nav-open");
+        }
+
+        if(navControl.checked)
+            navControl.checked = false;
+    }
 });
 
 function readTextFile(file)
