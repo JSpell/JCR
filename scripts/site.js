@@ -6,12 +6,17 @@ let body = document.querySelector('body');
 let heroContainer = document.querySelector(".hero-container");
 let navBar = document.querySelector("nav");
 let navControl = document.querySelector('#navControl');
+let navMenu = document.querySelector('.menu-icon')
+let closeMenu = document.querySelector('.menu-icon.close')
 
 /* Listen for a transition! */
 navBar.addEventListener("transitionend", function(e) {
 	if(e.propertyName == "top") {
         navBar.classList.toggle("nav-open");
-        body.classList.toggle('nav-open');
+
+
+        if(body.classList.contains('closing'))
+            body.className = "";
     }
 }, false);
 
@@ -37,6 +42,14 @@ window.addEventListener('resize', function() {
             navControl.checked = false;
     }
 });
+
+navMenu.addEventListener('click', function() {
+    body.classList.add('nav-open');
+})
+
+closeMenu.addEventListener('click', function() {
+    body.classList.add('closing');
+})
 
 function readTextFile(file)
 {
