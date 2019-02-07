@@ -6,6 +6,7 @@
             // max-width: 980px;
             position: relative;
             margin-top: 116px;
+            overflow: hidden;
 
             // @media screen and (min-width:980px) {
             //     left: calc(50% - 490px);
@@ -31,6 +32,7 @@
             position: relative;
             margin: 0 auto;
             max-width: 1200px;
+            min-height: 475px;
             width: 100%;
         }
 
@@ -50,28 +52,31 @@
             box-shadow: 0px 11px 28px 0px rgba(0,0,0, .9) inset;
 
             &:nth-child(1) { 
-                background-image: url(../images/PoHoJump.jpg);
-                background-position-y: 15%; 
+                background-image: url(../images/1.jpg);
+                background-position-y: 50%; 
             }
 
             &:nth-child(2) { 
-                background-image: url(../images/2.jpg);
+                background-image: url(../images/CMConfab-Jump-Castle-Riot-23.jpg);
+                background-position-y: 30%;
                 animation-delay: 6s; 
             }
 
             &:nth-child(3) { 
-                background-image: url(../images/8.jpg);
-                animation-delay: 12s;
+                background-image: url(../images/Apr7.jpg);
+                animation-delay: 18s;
+                background-position-y: 15%;
             }
 
             &:nth-child(4) { 
-                background-image: url(../images/7.jpg);
-                animation-delay: 18s; 
+                background-image: url(../images/Royal-American-Jump-Castle-Riot-50.jpg);
+                animation-delay: 12s;
+                background-position-y: 35%;
             }
 
             &:nth-child(5) { 
-                background-image: url(../images/5.jpg);
-                background-position-y: 25%;
+                background-image: url(../images/PoHoJump.jpg);
+                background-position-y: 15%;
                 animation-delay: 24s; 
             }
 
