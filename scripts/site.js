@@ -44,6 +44,9 @@ window.addEventListener('resize', function() {
 });
 
 navMenu.addEventListener('click', function() {
+    if(navBar.classList.contains("nav-open"))
+        navBar.classList.remove('nav-open');
+    
     body.classList.add('nav-open');
 })
 

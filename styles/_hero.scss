@@ -1,17 +1,12 @@
 .hero {
- @media screen and (min-width:768px) {
+ @media screen and (min-width:1023px) {
         &-container {
             background: #000;
             height: 40vh;
-            // max-width: 980px;
             position: relative;
             margin-top: 116px;
+            min-height: 590px;
             overflow: hidden;
-
-            // @media screen and (min-width:980px) {
-            //     left: calc(50% - 490px);
-            // }
-
         }
 
         &-logo {
@@ -52,26 +47,26 @@
             box-shadow: 0px 11px 28px 0px rgba(0,0,0, .9) inset;
 
             &:nth-child(1) { 
-                background-image: url(../images/1-min.jpg);
+                background-image: url(../images/1.jpg);
                 background-position-y: 50%; 
             }
 
             &:nth-child(2) { 
-                background-image: url(../images/CMConfab-Jump-Castle-Riot-23-min.jpg);
+                background-image: url(../images/CMConfab-Jump-Castle-Riot-23.jpg);
                 background-position-y: 30%;
                 animation-delay: 6s; 
             }
 
             &:nth-child(3) { 
-                background-image: url(../images/Apr7-min.jpg);
+                background-image: url(../images/Apr7.jpg);
                 animation-delay: 12s;
                 background-position-y: 20%;
             }
 
             &:nth-child(4) {
-                background-image: url(../images/Royal-American-Jump-Castle-Riot-50-min.jpg);
+                background-image: url(../images/JCR-Royal-Am-Jay.jpg);
                 animation-delay: 18s;
-                background-position-y: 35%;
+                background-position-y: 20%;
             }
 
             &:nth-child(5) { 
@@ -81,7 +76,7 @@
             }
 
             &:nth-child(6) { 
-                background-image: url(../images/jun08-2018-min.jpg);
+                background-image: url(../images/jun08-2018.jpg);
                 background-position-y: 20%;
                 animation-delay: 30s;
             }

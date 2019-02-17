@@ -7,7 +7,7 @@
 
         height: 100vh;
 
-        @media screen and (min-width:768px) {
+        @media screen and (min-width:1023px) {
             display: none;
         }
     }
@@ -15,11 +15,51 @@
 
     background-image: url(../images/jcr-logo.png);
     background-repeat: no-repeat;
-    background-position: -15px -9px;
+    //background-position: -15px -9px;
+    background-position: center;
     color: transparent;
     display: block;
+    flex: 1 0 auto;
     height: 255px;
     width: 253px;
 
     align-self: center;
+}
+
+.chevron {
+    &__container {
+        height: 50px;
+    }
+}
+
+.animated-chevron {
+    text-align: center;
+
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    &:before, &:after {
+        background-color: #000;
+        border-radius: 8px;
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 40px;
+    }
+
+    &:before {
+        transform: rotate(45deg) translateX(11px);
+    }
+
+    &:after {
+        transform: rotate(-45deg) translateX(-10px);
+    }
+}
+
+@keyframes bounce-2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
